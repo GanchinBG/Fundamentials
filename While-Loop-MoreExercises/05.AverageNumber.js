@@ -17,3 +17,7 @@ numbersAvg(["1",
 "23",
 "76",
 "23"])
+
+function average(input){
+  
+}
