@@ -12,11 +12,15 @@ function numbersAvg(input){
   console.log((sum / wagers).toFixed(2));
   }
 }
-numbersAvg
+
 
 function average(input){
   let sum = 0;
   let wagers = Number(input.shift());
+  if (wagers === 0){
+    console.log(`kur`);
+    return;
+  }
     for (let i = 0; i < input.length;i++){
       sum += Number(input[i]);
       
