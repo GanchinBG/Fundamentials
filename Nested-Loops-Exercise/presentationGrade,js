@@ -1,0 +1,35 @@
+function presentationGrade(input){
+let jury = Number(input.shift());
+let presentation = input.shift();
+let k = 0;
+let total = 0;
+let sum = 0;
+let index = 0;
+let count = 0;
+while(index < input.length){
+  for (let i = 0; i < jury;i++){
+    sum += Number(input[index]);
+    index++;
+    count++;
+  }
+  total += sum;
+  console.log(`${presentation} - ${(sum / jury).toFixed(2)}.`);
+  
+  presentation = input[index];
+  if(presentation === "Finish"){
+    break;
+  }
+  sum = 0;
+  index++;
+}
+console.log(`Student's final assessment is ${(total / count).toFixed(2)}.`);
+}
+
+presentationGrade(["2",
+"While-Loop",
+"6.00",
+"5.50",
+"For-Loop",
+"5.84",
+"5.66",
+"Finish"])
